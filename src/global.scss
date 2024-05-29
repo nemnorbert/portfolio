@@ -1,0 +1,15 @@
+@import 'src/sass.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-left: $sidenav_width;
+}
+section {
+    min-height: 90vh;
+    border: solid 2px red;
+}
