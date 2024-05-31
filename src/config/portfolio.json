@@ -1,0 +1,54 @@
+{
+    "tech": {
+        "sass": "Sass",
+        "ts": "Typescript",
+        "preact": "Preact",
+        "qwik": "Qwik",
+        "nodejs": "Node Js",
+        "sql": "Sql"
+    },
+    "portfolio":{
+        "adanor_card": {
+            "title": {
+                "en": "Adanor"
+            },
+            "tech": [
+                "sass",
+                "ts",
+                "qwik"
+            ]
+        },
+    
+        "rabraby": {
+            "title": {
+                "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem"
+            },
+            "tech": [
+                "sass",
+                "ts",
+                "qwik"
+            ]
+        },
+    
+        "counter": {
+            "title": {
+                "en": "Cash Counter"
+            },
+            "tech": [
+                "sass",
+                "preact"
+            ],
+            "github": "https://github.com/nemnorbert/cash_counter"
+        },
+    
+        "adanor_api": {
+            "title": {
+                "en": "Adanor API"
+            },
+            "tech": [
+                "nodejs",
+                "sql"
+            ]
+        }
+    }
+}

@@ -1,7 +1,21 @@
+@import 'src/sass.scss';
+
 section {
     padding: 1rem;
-    .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    .filter {
         display: flex;
+        flex-wrap: wrap;
+        column-gap: 5px;
+    }
+    .content {
+        display: grid;
         gap: 1rem;
+        grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
     }
 }

@@ -2,24 +2,28 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from './item.scss?inline';
 
 interface Items {
-    title: string,
-    image: string,
+    name: any,
+    data: any,
+    tech: any,
 }
 
 export default component$((props: Items) => {
   useStylesScoped$(style)
-    const title = props.title;
-    const image = props.image;
+    const name = props.name;
+    const data = props.data;
+    const tech = props.tech;
 
   return (
     <div class="item">
         <div class="cover">
-            <img src={image} alt="" />
+          <img src={`/work/cover/${name}.webp`} alt="" />
         </div>
         <div class="text">
-            <b>{ title }</b>
-            <div class="category">
-                #mui #ji
+            <b>{ data.title.en }</b>
+            <div class="tech">
+                {data.tech.map((item: string, key: number) => (
+                    <button key={key}>{tech[item]}</button>
+                ))}
             </div>
         </div>
     </div>

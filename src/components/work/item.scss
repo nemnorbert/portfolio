@@ -1,22 +1,40 @@
 .item {
     background-color: rgb(43, 43, 43);
     border-radius: 1rem;
+    transition: scale .25s;
     overflow: hidden;
+    cursor: pointer;
 
     .cover {
-        background-color: magenta;
-        width: 300px;
-        height: 200px;
+        background-color: var(--color-primary);
+        width: 100%;
+        height: 230px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
     .text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
         padding: 1rem;
+
         b {
             font-weight: bold;
             text-transform: uppercase;
             color: wheat;
+            font-size: 20px;
         }
-        .category {
-            color: green;
+        .tech {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
         }
+    }
+    &:hover {
+        scale: .95;
     }
 }

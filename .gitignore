@@ -1,3 +1,9 @@
+# Media
+*.webp
+
+# Public
+/public/work
+
 # Build
 /dist
 /lib
