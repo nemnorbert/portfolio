@@ -1,0 +1,32 @@
+section {
+    position: relative;
+    min-height: 90vh;
+    border-bottom: solid 2px rgba(26, 26, 26, 0.61);
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 35px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+// Home
+#home {
+    background-color: rgb(58, 58, 58);
+    text-transform: uppercase;
+
+    .title {
+        position: absolute;
+        left: 10vh;
+        bottom: 10vh;
+
+        h1 {
+            font-size: 60px;
+        }
+        p {
+            font-size: 40px;
+        }
+    }
+}

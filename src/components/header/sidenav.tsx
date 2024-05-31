@@ -1,4 +1,5 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 import style from './sidenav.scss?inline';
 
 export default component$(() => {
@@ -10,10 +11,10 @@ export default component$(() => {
 
         <nav>
             <ul>
-                <li>Főoldal</li>
-                <li>Munka</li>
-                <li>Rólam</li>
-                <li>Kapcsolat</li>
+                <li><Link href="/">Főoldal</Link></li>
+                <li><Link href="/work">Munka</Link></li>
+                <li><Link href="/about">Rólam</Link></li>
+                <li><Link href="/contact">Kapcsolat</Link></li>
             </ul>
         </nav>
     </div>

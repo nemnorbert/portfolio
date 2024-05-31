@@ -5,11 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root {
+    --color-primary: rgb(0, 132, 209);
+    --color-bg-1: rgb(233, 233, 233);
+    --color-bg-2: rgb(214, 214, 214);
+    --color-text: rgb(12, 12, 12);
+}
+html {
+    font-family: 'Satoshi', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--color-text);
+    background-color: var(--color-bg-1);
+}
 main {
+    min-height: 100vh;
+}
+main, footer {
     margin-left: $sidenav_width;
 }
-section {
-    min-height: 90vh;
-    border: solid 2px red;
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--color-primary);
 }

@@ -1,12 +1,17 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import style from './index.scss?inline';
 
 export default component$(() => {
+  useStylesScoped$(style);
+
   return (
     <>
       <section id="home">
-        <h1>Németh Norbert</h1>
-        <h2>Web developer</h2>
+        <div class="title">
+          <h1>Németh Norbert</h1>
+          <p>Web developer</p>
+        </div>
       </section>
 
       <section id="work">
