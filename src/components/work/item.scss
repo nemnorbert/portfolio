@@ -1,9 +1,13 @@
+@import 'src/sass.scss';
+
 .item {
-    background-color: rgb(43, 43, 43);
+    background-color: var(--color-bg-2);
     border-radius: 1rem;
     transition: scale .25s;
+    box-shadow: $shadow-1;
     overflow: hidden;
     cursor: pointer;
+    min-width: 200px;
 
     .cover {
         background-color: var(--color-primary);
@@ -25,13 +29,17 @@
         b {
             font-weight: bold;
             text-transform: uppercase;
-            color: wheat;
+            color: var(--color-primary);
             font-size: 20px;
         }
         .tech {
             display: flex;
             gap: 5px;
             flex-wrap: wrap;
+
+            i {
+                font-size: 30px;
+            }
         }
     }
     &:hover {

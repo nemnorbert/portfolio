@@ -1,21 +1,22 @@
 {
     "tech": {
-        "sass": "Sass",
-        "ts": "Typescript",
-        "preact": "Preact",
-        "qwik": "Qwik",
-        "nodejs": "Node Js",
-        "sql": "Sql"
+        "sass": {"name": "Sass", "icon": "sass-original"},
+        "ts": {"name": "Typescript", "icon": "typescript-plain"},
+        "preact": {"name": "Preact", "icon": "react-original-wordmark"},
+        "qwik": {"name": "Qwik", "icon": "qwik-plain"},
+        "nodejs": {"name": "Node Js", "icon": "nodejs-plain-wordmark"},
+        "sql": {"name": "Sql", "icon": "mysql-original"}
     },
     "portfolio":{
         "adanor_card": {
             "title": {
-                "en": "Adanor"
+                "en": "Adanor Card"
             },
+            "highlighted": true,
             "tech": [
                 "sass",
-                "ts",
-                "qwik"
+                "qwik",
+                "ts"
             ]
         },
     
@@ -23,10 +24,11 @@
             "title": {
                 "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem"
             },
+            "highlighted": true,
             "tech": [
                 "sass",
-                "ts",
-                "qwik"
+                "qwik",
+                "ts"
             ]
         },
     
@@ -34,6 +36,7 @@
             "title": {
                 "en": "Cash Counter"
             },
+            "highlighted": true,
             "tech": [
                 "sass",
                 "preact"
@@ -45,9 +48,30 @@
             "title": {
                 "en": "Adanor API"
             },
+            "highlighted": true,
             "tech": [
                 "nodejs",
                 "sql"
+            ]
+        },
+
+        "donut": {
+            "title": {
+                "en": "Donut Paradise"
+            },
+            "tech": [
+                "sass",
+                "preact"
+            ]
+        },
+
+        "sol_winery": {
+            "title": {
+                "en": "Sol Winery"
+            },
+            "tech": [
+                "sass",
+                "qwik"
             ]
         }
     }

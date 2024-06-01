@@ -11,8 +11,14 @@ export default component$(() => {
     <section>
       <h1>Összes Project</h1>
       <div class="filter">
+        <button>
+          <i class="devicon-html5-plain"></i> Összes
+        </button>
         {Object.entries(portfolioJSON.tech).map(([key, value]) => (
-            <button key={key}>{value}</button>
+            <button key={key} title={value.name}>
+              <i class={`devicon-${value.icon}`}></i>
+              {value.name}
+            </button>
         ))}
       </div>
       <div class="content">

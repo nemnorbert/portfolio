@@ -13,19 +13,21 @@ export default component$((props: Items) => {
     const data = props.data;
     const tech = props.tech;
 
-  return (
-    <div class="item">
-        <div class="cover">
-          <img src={`/work/cover/${name}.webp`} alt="" />
-        </div>
-        <div class="text">
-            <b>{ data.title.en }</b>
-            <div class="tech">
-                {data.tech.map((item: string, key: number) => (
-                    <button key={key}>{tech[item]}</button>
-                ))}
-            </div>
-        </div>
-    </div>
-  );
+    return (
+      <div class="item" title={data.title.en}>
+          <div class="cover">
+            <img src={`/work/cover/${name}.webp`} alt="" />
+          </div>
+          <div class="text">
+              <b>{ data.title.en }</b>
+              <div class="tech">
+                  {data.tech.map((item: string, key: number) => (
+                      <div key={key} title={tech[item].name}>
+                        <i class={`devicon-${tech[item].icon} colored`}></i>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </div>
+    );
 });

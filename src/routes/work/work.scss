@@ -11,7 +11,14 @@ section {
     .filter {
         display: flex;
         flex-wrap: wrap;
-        column-gap: 5px;
+        gap: 5px;
+
+        button {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            font-size: 20px;
+        }
     }
     .content {
         display: grid;
