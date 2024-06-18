@@ -10,10 +10,16 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     background-color: var(--color-bg-1);
-    box-shadow: 0 0 10px black;
+    //box-shadow: 0 0 10px black;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (min-width: $tablet-width) {
+    #sidenav {
+        display: flex;
+    }
 }

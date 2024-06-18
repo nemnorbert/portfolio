@@ -5,6 +5,7 @@ interface Items {
     name: any,
     data: any,
     tech: any,
+    category: string
 }
 
 export default component$((props: Items) => {
@@ -12,21 +13,29 @@ export default component$((props: Items) => {
     const name = props.name;
     const data = props.data;
     const tech = props.tech;
+    const category = props.category;
+
+    const isShow = () => {
+      if (category === "") {
+        return "item";
+      }
+      return data.tech.includes(category) ? "item" : "item hide"
+    }
 
     return (
-      <div class="item" title={data.title.en}>
+      <div class={isShow()} title={data.title.en}>
+          <div class="title">
+            { data.title.en }
+          </div>
           <div class="cover">
             <img src={`/work/cover/${name}.webp`} alt="" />
           </div>
-          <div class="text">
-              <b>{ data.title.en }</b>
-              <div class="tech">
-                  {data.tech.map((item: string, key: number) => (
-                      <div key={key} title={tech[item].name}>
-                        <i class={`devicon-${tech[item].icon} colored`}></i>
-                      </div>
-                  ))}
-              </div>
+          <div class="tech">
+              {data.tech.map((item: string, key: number) => (
+                  <div key={key} title={tech[item].name}>
+                    <i class={`devicon-${tech[item].icon}`}></i>
+                  </div>
+              ))}
           </div>
       </div>
     );

@@ -21,7 +21,7 @@ export default component$(() => {
         <h2>Portfólió (Kiemelt)</h2>
         <div class="content">
           {Object.entries(portfolioJSON.portfolio).map(([key, value]) => (
-              <Item key={key} name={key} tech={portfolioJSON.tech} data={value}/>
+            value?.star ? <Item key={key} name={key} tech={portfolioJSON.tech} data={value} category=""/> : undefined
           ))}
         </div>
         <Link href="/work">Összes Megtekintése</Link>

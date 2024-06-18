@@ -1,78 +1,89 @@
 {
     "tech": {
-        "sass": {"name": "Sass", "icon": "sass-original"},
-        "ts": {"name": "Typescript", "icon": "typescript-plain"},
-        "preact": {"name": "Preact", "icon": "react-original-wordmark"},
         "qwik": {"name": "Qwik", "icon": "qwik-plain"},
-        "nodejs": {"name": "Node Js", "icon": "nodejs-plain-wordmark"},
-        "sql": {"name": "Sql", "icon": "mysql-original"}
+        "ts": {"name": "Typescript", "icon": "typescript-plain"},
+        "preact": {"name": "Preact", "icon": "react-original"},
+        "sass": {"name": "Sass", "icon": "sass-original"},
+        "lit": {"name": "Lit", "icon": "nodewebkit-plain"},
+        "node": {"name": "Node", "icon": "nodejs-plain"},
+        "sql": {"name": "SQL", "icon": "mysql-original"}
     },
     "portfolio":{
         "adanor_card": {
             "title": {
-                "en": "Adanor Card"
+                "en": "Adanor"
             },
-            "highlighted": true,
-            "tech": [
-                "sass",
-                "qwik",
-                "ts"
-            ]
+            "star": true,
+            "tech": ["sass", "qwik", "ts"]
         },
     
         "rabraby": {
             "title": {
                 "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem"
             },
-            "highlighted": true,
-            "tech": [
-                "sass",
-                "qwik",
-                "ts"
-            ]
+            "star": true,
+            "tech": ["sass", "qwik", "ts"]
         },
     
         "counter": {
             "title": {
                 "en": "Cash Counter"
             },
-            "highlighted": true,
-            "tech": [
-                "sass",
-                "preact"
-            ],
+            "star": true,
+            "tech": ["sass", "preact"],
             "github": "https://github.com/nemnorbert/cash_counter"
+        },
+
+        "euroguide": {
+            "title": {
+                "en": "Euroguide"
+            },
+            "star": true,
+            "tech": ["sass", "qwik", "ts"]
         },
     
         "adanor_api": {
             "title": {
                 "en": "Adanor API"
             },
-            "highlighted": true,
-            "tech": [
-                "nodejs",
-                "sql"
-            ]
+            "star": true,
+            "tech": ["node","sql"]
         },
 
         "donut": {
             "title": {
                 "en": "Donut Paradise"
             },
-            "tech": [
-                "sass",
-                "preact"
-            ]
+            "tech": ["sass", "qwik", "ts"]
         },
 
         "sol_winery": {
             "title": {
                 "en": "Sol Winery"
             },
-            "tech": [
-                "sass",
-                "qwik"
-            ]
+            "tech": ["sass", "qwik"]
+        },
+
+        "webOS": {
+            "title": {
+                "en": "Web OS"
+            },
+            "tech": ["sass", "preact"]
+        },
+
+        "drinkGame": {
+            "title": {
+                "en": "Drinking Game",
+                "hu": "Ivós játék"
+            },
+            "tech": ["sass", "preact"]
+        },
+
+        "CookieCat": {
+            "title": {
+                "en": "CookieCat"
+            },
+            "tech": ["sass", "lit"]
         }
     }
 }

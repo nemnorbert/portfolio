@@ -1,17 +1,23 @@
 @import 'src/sass.scss';
 
 section {
-    padding: 1rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
     max-width: $max-width;
     margin: 0 auto;
 
+    h1 {
+        padding: 1rem;
+    }
     .filter {
         display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
+        overflow: auto;
+        column-gap: 10px;
+        top: 0;
+        position: sticky;
+        padding: 5px;
+        background-color: var(--color-bg-1);
+        z-index: 10;
 
         button {
             display: flex;
@@ -21,8 +27,9 @@ section {
         }
     }
     .content {
+        padding: 1rem;
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat( auto-fit, minmax(400px, 1fr) );
+        gap: 2rem;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     }
 }

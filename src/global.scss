@@ -20,9 +20,6 @@ html {
 main {
     min-height: 100vh;
 }
-main, footer {
-    margin-left: $sidenav_width;
-}
 h1 {
     font-size: 40px;
     text-transform: uppercase;
@@ -35,10 +32,25 @@ a {
     color: var(--color-primary);
 }
 button, .btn {
+    background-color: var(--color-bg-1);
+    color: var(--color-primary);
+    border-radius: 2rem;
+    border: solid 2px var(--color-primary);
+    padding: 5px 10px;
+    cursor: pointer;
+
+    $button-ani-1: .5s;
+    transition: color $button-ani-1, background-color $button-ani-1, border-color $button-ani-1;
+}
+button.active, .btn.active {
     background-color: var(--color-primary);
     color: var(--color-bg-1);
-    border-radius: 5px;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
+    border-color: transparent;
+}
+
+
+@media only screen and (min-width: $tablet-width) {
+    main, footer {
+        margin-left: $sidenav_width;
+    }
 }
