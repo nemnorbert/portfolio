@@ -24,11 +24,11 @@ export default component$((props: Items) => {
 
     return (
       <div class={isShow()} title={data.title.en}>
-          <div class="title">
-            { data.title.en }
-          </div>
           <div class="cover">
             <img src={`/work/cover/${name}.webp`} alt="" />
+          </div>
+          <div class="title">
+            { data.title.en }
           </div>
           <div class="tech">
               {data.tech.map((item: string, key: number) => (

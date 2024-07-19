@@ -1,25 +1,17 @@
 @import 'src/sass.scss';
 
 #sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: $sidenav_width; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    position: fixed;
+    top: 0;
     left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    background-color: var(--color-bg-1);
-    //box-shadow: 0 0 10px black;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 10;
 
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-@media only screen and (min-width: $tablet-width) {
-    #sidenav {
+    ul {
         display: flex;
+        column-gap: 5px;
     }
 }

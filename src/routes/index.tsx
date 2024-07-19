@@ -1,39 +1,22 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import style from './index.scss?inline';
-import portfolioJSON from "~/config/portfolio.json";
-import Item from "~/components/work/item";
+
+// Components
+import Hero from "~/components/hero/hero";
+import Work from "~/components/work/work";
+import About from "~/components/about/about";
+import Contact from "~/components/contact/contact";
 
 export default component$(() => {
   useStylesScoped$(style);
 
   return (
     <>
-      <section id="home">
-        <div class="title">
-          <h1>Németh Norbert</h1>
-          <p>Web developer</p>
-        </div>
-      </section>
-
-      <section id="work">
-        <h2>Portfólió (Kiemelt)</h2>
-        <div class="content">
-          {Object.entries(portfolioJSON.portfolio).map(([key, value]) => (
-            value?.star ? <Item key={key} name={key} tech={portfolioJSON.tech} data={value} category=""/> : undefined
-          ))}
-        </div>
-        <Link href="/work">Összes Megtekintése</Link>
-      </section>
-
-      <section id="about">
-        <h2>Rólam</h2>
-      </section>
-
-      <section id="contact">
-        <h2>Kapcsolat</h2>
-      </section>
+      <Hero />
+      <About />
+      <Work />
+      <Contact />
     </>
   );
 });

@@ -6,7 +6,8 @@ export default component$(() => {
 
   return (
     <footer>
-        footer
+        <div class="social">Norbert Németh</div>
+        <div>social</div>
     </footer>
   );
 });

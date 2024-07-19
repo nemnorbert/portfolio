@@ -9,40 +9,30 @@
         "sql": {"name": "SQL", "icon": "mysql-original"}
     },
     "portfolio":{
-        "adanor_card": {
-            "title": {
-                "en": "Adanor"
-            },
+        "adanor": {
+            "active": true,
+            "title": { "en": "Adanor" },
             "star": true,
             "tech": ["sass", "qwik", "ts"]
         },
     
         "rabraby": {
-            "title": {
-                "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem"
-            },
+            "active": true,
+            "title": { "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem" },
             "star": true,
             "tech": ["sass", "qwik", "ts"]
         },
     
         "counter": {
-            "title": {
-                "en": "Cash Counter"
-            },
+            "active": true,
+            "title": { "en": "Cash Counter" },
             "star": true,
             "tech": ["sass", "preact"],
             "github": "https://github.com/nemnorbert/cash_counter"
         },
-
-        "euroguide": {
-            "title": {
-                "en": "Euroguide"
-            },
-            "star": true,
-            "tech": ["sass", "qwik", "ts"]
-        },
     
         "adanor_api": {
+            "active": true,
             "title": {
                 "en": "Adanor API"
             },
@@ -51,39 +41,27 @@
         },
 
         "donut": {
-            "title": {
-                "en": "Donut Paradise"
-            },
+            "active": false,
+            "title": {"en": "Donut Paradise"},
             "tech": ["sass", "qwik", "ts"]
         },
 
         "sol_winery": {
-            "title": {
-                "en": "Sol Winery"
-            },
+            "active": false,
+            "title": { "en": "Sol Winery" },
             "tech": ["sass", "qwik"]
         },
 
         "webOS": {
-            "title": {
-                "en": "Web OS"
-            },
+            "active": false,
+            "title": {"en": "Web OS"},
             "tech": ["sass", "preact"]
         },
 
         "drinkGame": {
-            "title": {
-                "en": "Drinking Game",
-                "hu": "Ivós játék"
-            },
+            "active": false,
+            "title": { "en": "Drinking Game","hu": "Ivós játék" },
             "tech": ["sass", "preact"]
-        },
-
-        "CookieCat": {
-            "title": {
-                "en": "CookieCat"
-            },
-            "tech": ["sass", "lit"]
         }
     }
 }

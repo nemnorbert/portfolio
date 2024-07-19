@@ -1,0 +1,19 @@
+section {
+    position: relative;
+    background-color: rgb(58, 58, 58);
+    text-transform: uppercase;
+    min-height: 90vh;
+
+    .title {
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+
+        h1 {
+            font-size: 60px;
+        }
+        p {
+            font-size: 40px;
+        }
+    }
+}
