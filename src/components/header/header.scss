@@ -1,6 +1,6 @@
 @import 'src/sass.scss';
 
-#sidenav {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,9 @@
     justify-content: space-between;
     padding: 1rem;
     z-index: 10;
+    color: var(--color-text);
+    font-weight: bold;
+    text-transform: uppercase;
 
     ul {
         display: flex;

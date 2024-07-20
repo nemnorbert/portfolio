@@ -9,6 +9,10 @@ export default component$(() => {
             <div class="title">
                 <h1>Németh Norbert</h1>
                 <p>Web developer</p>
+                <div class="buttons">
+                    <div><i class="bi bi-chat-fill"></i> Contact Me</div>
+                    <div><i class="bi bi-laptop"></i> My Portfolio</div>
+                </div>
             </div>
         </section>
     );

@@ -5,12 +5,18 @@ import Form from "./form";
 export default component$(() => {
     useStylesScoped$(style);
 
-    return (
+    return (<>
+        <h2 class="title">Contact Me</h2>
         <section>
-            <div class="title">
-                <h2>Contact Me</h2>
+            <div class="social">
+                social
             </div>
-            <Form />
+            <div class="form">
+                <Form />
+            </div>
+            <div class="other">
+                other
+            </div>
         </section>
-    );
+    </>);
 });

@@ -1,3 +1,23 @@
+@import 'src/sass.scss';
+
 section {
-    background-color: rgba(46, 46, 46, 0.699);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+
+    & > * {
+        background-color: rgba(0, 0, 0, 0.103);
+        grid-column: span 12;
+    }
+    .form {
+        grid-row: span 2;
+    }
+}
+
+@media only screen and (min-width: $tablet-width) {
+    section {
+        & > * {
+            grid-column: span 6;
+        }
+    }
 }

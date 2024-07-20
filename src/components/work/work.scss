@@ -3,9 +3,8 @@
 section {
     display: flex;
     flex-direction: column;
-    max-width: $max-width;
-    margin: 0 auto;
-
+    background-color: var(--color-bg-1);
+    
     .filter {
         display: flex;
         overflow: auto;
@@ -15,6 +14,7 @@ section {
         padding: 5px;
         background-color: var(--color-bg-1);
         z-index: 10;
+        margin: 0 auto;
 
         button {
             display: flex;
@@ -32,5 +32,11 @@ section {
 
     p {
         text-align: center;
+    }
+}
+
+@media only screen and (min-width: $max-width) {
+    section {
+        border-radius: $border-base;
     }
 }

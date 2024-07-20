@@ -1,3 +1,88 @@
+@import 'src/sass.scss';
+
 section {
-    background-color: rgba(39, 39, 39, 0.733);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    color: white;
+    margin: 0 auto;
+    width: 90vw;
+    
+    & > div {
+        //background-color: rgba(0, 0, 0, 0.062);
+        border-radius: $border-base;
+        box-shadow: 0 0 10px #0000002e;
+        padding: 2rem;
+    }
+
+    .picture {
+        padding: 0;
+        grid-column: span 4;
+        overflow: hidden;
+        grid-row: span 2;
+    
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    .about {
+        grid-column: span 4;
+        grid-row: span 2;
+    
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+    
+    .cv, .flag {
+        background-color: rgb(37, 37, 37);
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .flag {
+        overflow: hidden;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        span {
+            height: 100%;
+        }
+        :nth-child(1) { background-color: red; }
+        :nth-child(2) { background-color: white; }
+        :nth-child(3) { background-color: green; }
+    }
+    
+    .skills {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+}
+
+@media only screen and (min-width: $tablet-width) {
+    section {
+        grid-template-columns: repeat(8, 1fr);
+        .about {
+          background-color: lightblue;
+        }
+    }
+}
+
+@media only screen and (min-width: $laptop-width) {
+    section {
+        grid-template-columns: repeat(12, 1fr);
+        .about {
+          background-color: rgb(14, 149, 194);
+        }
+    }
 }

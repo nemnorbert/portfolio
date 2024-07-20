@@ -1,8 +1,9 @@
+@import 'src/sass.scss';
+
 section {
     position: relative;
-    background-color: rgb(58, 58, 58);
     text-transform: uppercase;
-    min-height: 90vh;
+    min-height: 80vh;
 
     .title {
         position: absolute;
@@ -10,10 +11,32 @@ section {
         bottom: 2rem;
 
         h1 {
-            font-size: 60px;
+            font-size: 50px;
+            line-height: 55px;
         }
         p {
-            font-size: 40px;
+            font-size: 35px;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            & > div {
+                border-radius: $border-base;
+                background-color: magenta;
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    section {
+        .title {
+            line-height: 55px;
+            h1 {
+                font-size: 80px;
+            }
         }
     }
 }

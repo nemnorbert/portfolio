@@ -24,7 +24,7 @@ export default component$((props: Props) => {
     return (
         <section>
             <div class="title">
-                <h2>Work</h2>
+                <h2>Works</h2>
             </div>
             <div class="filter">
                 <button 

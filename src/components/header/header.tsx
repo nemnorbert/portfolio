@@ -1,13 +1,13 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import { Link } from "@builder.io/qwik-city";
-import style from './sidenav.scss?inline';
+import style from './header.scss?inline';
 
 export default component$(() => {
   useStylesScoped$(style)
 
   return (
-    <div id='sidenav'>
-        <div>Image</div>
+    <div id='header'>
+        <div>NN</div>
 
         <nav>
             <ul>
