@@ -1,0 +1,21 @@
+{
+    "iso": "hu",
+    "home": {
+        "name": "Németh Norbert"
+    },
+    "about": {
+        "text": ""
+    },
+    "work": {
+        "btns": {
+            "demo": "Élő",
+            "details": "Részletek"
+        }
+    },
+    "nav": {
+        "home": "Főoldal",
+        "work": "Portfólió",
+        "contact": "Kapcsolat",
+        "about": "Rólam"
+    }
+}

@@ -10,6 +10,7 @@
     },
     "portfolio":{
         "adanor": {
+            "url": "https://adanor.eu/c/nn",
             "active": true,
             "title": { "en": "Adanor" },
             "star": true,
@@ -17,6 +18,7 @@
         },
     
         "rabraby": {
+            "url": "https://rabraby.hu",
             "active": true,
             "title": { "en": "Rab Ráby Restaurant", "hu": "Rab Ráby Étterem" },
             "star": true,
@@ -24,6 +26,7 @@
         },
     
         "counter": {
+            "url": "https://work.adanor.eu/counter",
             "active": true,
             "title": { "en": "Cash Counter" },
             "star": true,
@@ -32,6 +35,7 @@
         },
     
         "adanor_api": {
+            "url": "https://api.adanor.eu",
             "active": true,
             "title": {
                 "en": "Adanor API"

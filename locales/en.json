@@ -1,0 +1,21 @@
+{
+    "iso": "en",
+    "home": {
+        "name": "Norbert Németh"
+    },
+    "about": {
+        "text": ""
+    },
+    "work": {
+        "btns": {
+            "demo": "Live",
+            "details": "Details"
+        }
+    },
+    "nav": {
+        "home": "Home",
+        "work": "Portfolio",
+        "contact": "Contact",
+        "about": "About Me"
+    }
+}

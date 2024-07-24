@@ -1,0 +1,21 @@
+{
+    "email": "info@adanor.eu",
+    "contacts": {
+        "messenger": {
+        "href": "http://m.me/ne.norbert",
+        "icon": "messenger"
+        },
+        "telegram": {
+            "href": "https://t.me/nthnorbert",
+            "icon": "telegram"
+        },
+        "github": {
+            "href": "https://github.com/nemnorbert",
+            "icon": "github"
+        },
+        "linkedin": {
+            "href": "www.linkedin.com/in/norbert-németh-09388831a",
+            "icon": "linkedin"
+        }
+    }
+}

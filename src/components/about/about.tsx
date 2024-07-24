@@ -1,12 +1,18 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from './about.scss?inline';
 import ProfilePicture from '~/media/about/me.jpg?jsx';
+import type { TranslatesCurrent } from "~/types/locales";
 
-export default component$(() => {
+interface Props {
+    translates: TranslatesCurrent
+}
+
+export default component$((props: Props) => {
     useStylesScoped$(style);
+    const translates = props.translates;
 
     return (<>
-        <h2 class="title">Rólam</h2>
+        <h2 class="title">{ translates.nav.about }</h2>
         <section>
             <div class="picture">
                 <ProfilePicture alt="Picture of me" />

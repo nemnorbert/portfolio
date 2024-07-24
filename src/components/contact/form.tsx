@@ -4,12 +4,13 @@ import style from './form.scss?inline';
 export default component$(() => {
     useStylesScoped$(style);
 
-    return (
+    return (<>
+        <h3>Send email to me</h3>
         <form>
             <input id="name" type="text" required />
             <input id="email" type="email" required />
-            <textarea id="message" rows="10" cols="30" required />
+            <textarea id="message" required />
             <input type="submit" value="Submit" />
         </form>
-    );
+    </>);
 });

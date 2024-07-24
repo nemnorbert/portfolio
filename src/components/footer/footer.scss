@@ -1,12 +1,18 @@
 footer {
-    padding: 1rem;
-    //background-color: var(--color-primary);
-    //background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(20, 20, 20, 0.15));
+    padding: 2rem;
     color: var(--color-text);
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    row-gap: .5rem;
+    flex-direction: column;
     flex-wrap: wrap;
     text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px hsla(0, 0%, 7%, 0.1);
+
+    .title {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
 }

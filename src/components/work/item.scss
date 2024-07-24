@@ -1,24 +1,14 @@
 @import 'src/sass.scss';
 
 .item {
-    transition: scale .25s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    //cursor: pointer;
     max-width: 500px;
+    overflow: hidden;
+    border-radius: $border-base;
     
-    .title {
-        font-size: 20px;
-        text-transform: uppercase;
-        font-weight: bold;
-        white-space: nowrap;
-        overflow: hidden;
-    }
     .cover {
+        position: relative;
         min-width: 200px;
-        overflow: hidden;
-        border-radius: 1rem;
         box-shadow: $shadow-1;
         background-color: var(--color-primary);
         width: auto;
@@ -30,19 +20,42 @@
             object-fit: cover;
         }
     }
-    .tech {
-        display: flex;
-        gap: 5px;
-        flex-wrap: wrap;
+    .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        padding-top: 3rem;
+        background-image: linear-gradient(transparent, black);
 
-        i {
-            font-size: 30px;
-            color: var(--color-primary);
+        .title {
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .tech {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+    
+            i {
+                font-size: 30px;
+                color: var(--color-primary);
+            }
         }
     }
-    &:hover {
-        scale: .95;
+    .action {
+        background-color: var(--color-primary);
+        background-image: linear-gradient(transparent, rgba(15, 15, 15, 0.247));
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
     }
+    
     &.hide {
         display: none;
     }

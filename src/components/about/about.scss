@@ -4,16 +4,15 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
+    gap: $gap-1;
     color: white;
     margin: 0 auto;
     width: 90vw;
     
     & > div {
-        //background-color: rgba(0, 0, 0, 0.062);
         border-radius: $border-base;
         box-shadow: 0 0 10px #0000002e;
-        padding: 2rem;
+        padding: $gap-1;
     }
 
     .picture {

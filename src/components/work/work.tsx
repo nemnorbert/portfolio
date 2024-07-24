@@ -2,15 +2,15 @@ import { component$, useStore, useStylesScoped$, $ } from "@builder.io/qwik";
 import style from './work.scss?inline';
 import Item from "~/components/work/item";
 import portfolioJSON from "~/config/portfolio.json";
+import type { TranslatesCurrent } from "~/types/locales";
 
 interface Props {
-    teszt?: string;
+    translates: TranslatesCurrent
 }
 
 export default component$((props: Props) => {
     useStylesScoped$(style);
-    const teszt = props.teszt;
-    console.log(teszt)
+    const translates = props.translates;
 
     const category = useStore({
         current: "",
@@ -24,7 +24,7 @@ export default component$((props: Props) => {
     return (
         <section>
             <div class="title">
-                <h2>Works</h2>
+                <h2>{translates.nav.work}</h2>
             </div>
             <div class="filter">
                 <button 
@@ -53,6 +53,7 @@ export default component$((props: Props) => {
                         tech={portfolioJSON.tech} 
                         data={value} 
                         category={category.current}
+                        translates={translates}
                     />
                 ))}
             </div>

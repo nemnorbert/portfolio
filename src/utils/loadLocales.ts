@@ -1,0 +1,25 @@
+import type { TranslatesCurrent } from "~/types/locales";
+
+async function loadTranslations(iso = "en", path?: string): Promise<TranslatesCurrent | undefined> {
+  try {
+    const lang = iso === "hu" ? "hu" : "en" ;
+    const baseUrl = getBaseUrl(path);
+    const url = `${baseUrl}/locales/${lang}.json`;
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Nem sikerült letölteni a(z) ${lang} nyelvű fordítási fájlt`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error when importing lang JSON:', error);
+    throw error;
+  }
+}
+
+function getBaseUrl(path?: string): string {
+  if (path) { return path; }
+  return process.env.NODE_ENV === 'production' ? 'https://me.adanor.eu' : 'http://localhost:5173';
+}
+
+export default loadTranslations;
