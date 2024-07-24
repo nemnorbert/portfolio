@@ -1,6 +1,7 @@
 import { component$, useStore, useStylesScoped$, $ } from "@builder.io/qwik";
 import style from './work.scss?inline';
 import Item from "~/components/work/item";
+import Modal from "~/components/work/modal";
 import portfolioJSON from "~/config/portfolio.json";
 import type { TranslatesCurrent } from "~/types/locales";
 
@@ -12,9 +13,11 @@ export default component$((props: Props) => {
     useStylesScoped$(style);
     const translates = props.translates;
 
-    const category = useStore({
-        current: "",
-    })
+    const category = useStore({current: ""})
+    const modal = useStore({current: {
+        open: false,
+        code: ""
+    }})
 
     const clickFilterButton = $((key: string) => {
         const isSet = category.current.includes(key);
@@ -54,9 +57,12 @@ export default component$((props: Props) => {
                         data={value} 
                         category={category.current}
                         translates={translates}
+                        modal={modal}
                     />
                 ))}
             </div>
+
+            <Modal modal={modal} translates={translates} />
         </section>
     );
 });

@@ -17,24 +17,24 @@ export default component$((props: Props) => {
         <h2 class="title">{translates.nav.contact}</h2>
         <section>
             <div class="social">
-                <h3>Elérhetőségek</h3>
-                <div class="buttons">
-                    <button onClick$={() => emailSender()} class="link"><i class="bi bi-envelope-fill"></i> Email</button>
-                    {
-                        Object.keys(configJson.contacts).map(([key, value]) => (
-                            <a key={key} href={value.href}>
-                                <i class={`bi bi-${value.icon}`}></i> {value.icon}
-                            </a>
-                        ))
-                    }
-                </div>
+                <div onClick$={() => emailSender()} class="link"><i class="bi bi-envelope-fill"></i> email</div>
+                {
+                    Object.entries(configJson.contacts).map(([key, value]) => (
+                        <a key={key} href={value.href} target="_blank">
+                            <i class={`bi bi-${value.icon}`}></i> {key}
+                        </a>
+                    ))
+                }
             </div>
             <div class="form">
-                <Form />
+                <Form translates={translates} />
             </div>
-            <div class="other">
-                other
-            </div>
+            <a href={configJson.card} class="card" target="_blank">
+                <div class="title"><i class="bi bi-person-badge-fill"></i> Digitális Névjegykártya</div>
+                <div class="content">
+
+                </div>
+            </a>
         </section>
     </>);
 });

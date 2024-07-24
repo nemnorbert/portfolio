@@ -4,13 +4,18 @@
         "name": "Norbert Németh"
     },
     "about": {
+        "title": "Who Am I?",
         "text": ""
     },
+    "cv": "CV",
     "work": {
         "btns": {
-            "demo": "Live",
+            "demo": "Demo",
             "details": "Details"
         }
+    },
+    "contact": {
+        "sendmail": "Send email"
     },
     "nav": {
         "home": "Home",

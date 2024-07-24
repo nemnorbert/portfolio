@@ -2,24 +2,25 @@
 
 section {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
     gap: $gap-1;
     color: white;
     margin: 0 auto;
     width: 90vw;
+    min-width: $min-width;
     
-    & > div {
+    & > * {
+        grid-column: span 12;
         border-radius: $border-base;
         box-shadow: 0 0 10px #0000002e;
+        background-color: rgba(36, 36, 36, 0.842);
         padding: $gap-1;
     }
 
     .picture {
         padding: 0;
-        grid-column: span 4;
         overflow: hidden;
-        grid-row: span 2;
     
         img {
             width: 100%;
@@ -29,9 +30,14 @@ section {
     }
     
     .about {
-        grid-column: span 4;
-        grid-row: span 2;
-    
+        background-color: var(--color-bg-1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        padding: 2rem;
+
         .title {
             font-size: 25px;
             font-weight: bold;
@@ -44,9 +50,40 @@ section {
     }
     
     .cv, .flag {
-        background-color: rgb(37, 37, 37);
-        grid-column: span 2;
-        grid-row: span 1;
+        grid-column: span 6;
+    }
+
+    .learn {
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .cv {
+        color: white;
+        background-color: rgb(0, 174, 255);
+        background-image: linear-gradient(transparent, rgba(20, 20, 20, 0.212));
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        text-align: center;
+        overflow: hidden;
+        
+        & > div {
+            transform: translateY(-50px);
+            opacity: 0;
+            animation: 10s cvAni infinite;
+        }
+
+        @keyframes cvAni {
+            0% {transform: translateY(-50px); opacity: 0;}
+            10%, 90% {transform: translateY(0); opacity: 1;}
+            100% {transform: translateY(+50px); opacity: 0;}
+        }
     }
 
     .flag {
@@ -61,27 +98,36 @@ section {
         :nth-child(2) { background-color: white; }
         :nth-child(3) { background-color: green; }
     }
-    
-    .skills {
-        grid-column: span 4;
-        grid-row: span 1;
-    }
 }
 
 @media only screen and (min-width: $tablet-width) {
     section {
-        grid-template-columns: repeat(8, 1fr);
-        .about {
-          background-color: lightblue;
+        .picture, .about, .learn, .skill {
+            grid-column: span 6;
+        }
+        .cv, .flag {
+            grid-column: span 3;
+        }
+        .skill {
+            grid-row: span 2;
         }
     }
 }
 
 @media only screen and (min-width: $laptop-width) {
     section {
-        grid-template-columns: repeat(12, 1fr);
-        .about {
-          background-color: rgb(14, 149, 194);
+        .picture, .about {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+        .learn, .skill {
+            grid-column: span 4;
+        }
+        .cv, .flag {
+            grid-column: span 2;
+        }
+        .skill {
+            grid-row: span 1;
         }
     }
 }

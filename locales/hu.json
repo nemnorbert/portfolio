@@ -4,13 +4,18 @@
         "name": "Németh Norbert"
     },
     "about": {
+        "title": "Ki vagyok én?",
         "text": ""
     },
+    "cv": "Önéletrajz",
     "work": {
         "btns": {
-            "demo": "Élő",
+            "demo": "Bemutató",
             "details": "Részletek"
         }
+    },
+    "contact": {
+        "sendmail": "Email küldése"
     },
     "nav": {
         "home": "Főoldal",

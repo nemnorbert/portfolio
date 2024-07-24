@@ -1,15 +1,22 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import style from './form.scss?inline';
 
-export default component$(() => {
+import type { TranslatesCurrent } from "~/types/locales";
+
+interface Props {
+    translates: TranslatesCurrent
+}
+
+export default component$((props: Props) => {
     useStylesScoped$(style);
+    const translates = props.translates;
 
     return (<>
-        <h3>Send email to me</h3>
+        <h3>{translates.contact.sendmail}</h3>
         <form>
             <input id="name" type="text" required />
             <input id="email" type="email" required />
-            <textarea id="message" required />
+            <textarea id="message" rows={4} required />
             <input type="submit" value="Submit" />
         </form>
     </>);

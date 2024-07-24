@@ -7,7 +7,8 @@ interface Props {
     data: any,
     tech: any,
     category: string
-    translates: TranslatesCurrent
+    translates: TranslatesCurrent,
+    model: any
 }
 
 export default component$((props: Props) => {

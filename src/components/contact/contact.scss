@@ -15,8 +15,37 @@ section {
         grid-column: span 12;
         padding: $gap-1;
     }
+    .social {
+        text-align: center;
+        background-color: transparent;
+        display: flex;
+        column-gap: 10px;
+        justify-content: space-around;
+        padding: 0;
+
+        i {
+            font-size: 30px;
+        }
+        & > * {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
     .form {
         grid-row: span 2;
+    }
+    .card {
+        background-color: rgb(27, 27, 27);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .title {
+            font-weight: bold;
+            font-size: 22px;
+        }
     }
 }
 

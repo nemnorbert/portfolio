@@ -12,7 +12,6 @@ import Contact from "~/components/contact/contact";
 export default component$(() => {
   useStylesScoped$(style);
   const translates = useContext(CTX_Translate);
-  console.log(translates);
 
   return (
     <>
