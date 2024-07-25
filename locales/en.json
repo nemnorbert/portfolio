@@ -5,9 +5,11 @@
     },
     "about": {
         "title": "Who Am I?",
-        "text": ""
+        "text": "",
+        "skill": "Skills",
+        "learn": "I'm learning now"
     },
-    "cv": "CV",
+    "cv": "Download CV",
     "work": {
         "btns": {
             "demo": "Demo",
@@ -15,7 +17,8 @@
         }
     },
     "contact": {
-        "sendmail": "Send email"
+        "card": "Digital Business Card",
+        "send": "Send Email"
     },
     "nav": {
         "home": "Home",

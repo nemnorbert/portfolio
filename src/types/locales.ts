@@ -4,13 +4,21 @@ export interface TranslatesCurrent {
       name: string
     }
     about: {
-      text: string
+      title: string;
+      text: string;
+      skill: string;
+      learn: string;
     }
+    cv: string;
     work: {
       btns: {
         demo: string;
         details: string;
       }
+    }
+    contact: {
+      card: string;
+      send: string;
     }
     nav: {
       home: string;

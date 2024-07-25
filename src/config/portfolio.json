@@ -1,11 +1,27 @@
 {
+    "skills": [
+        "html", "css", "react", "qwik", "ts", "sass", 
+        "node", "ex", "sql", "aws", 
+        "npm", "git", "blender", "ps"
+    ],
+    "learn": ["qwik","ts","aws"],
+    "tech_menu": ["qwik","react","ts","sass","lit","node","sql"],
+
     "tech": {
+        "html": {"name": "HTML", "icon": "html5-plain"},
+        "css": {"name": "CSS", "icon": "css3-plain"},
+        "ex": {"name": "Express", "icon": "express-original"},
+        "npm": {"name": "npm", "icon": "npm-original-wordmark"},
+        "git": {"name": "Git", "icon": "git-plain"},
+        "blender": {"name": "Blender", "icon": "blender-original"},
+        "ps": {"name": "Photoshop", "icon": "photoshop-plain"},
+        "aws": {"name": "AWS", "icon": "amazonwebservices-plain-wordmark"},
         "qwik": {"name": "Qwik", "icon": "qwik-plain"},
+        "react": {"name": "React", "icon": "react-original"},
         "ts": {"name": "Typescript", "icon": "typescript-plain"},
-        "preact": {"name": "Preact", "icon": "react-original"},
         "sass": {"name": "Sass", "icon": "sass-original"},
         "lit": {"name": "Lit", "icon": "nodewebkit-plain"},
-        "node": {"name": "Node", "icon": "nodejs-plain"},
+        "node": {"name": "Node Js", "icon": "nodejs-plain"},
         "sql": {"name": "SQL", "icon": "mysql-original"}
     },
     "portfolio":{
@@ -30,7 +46,7 @@
             "active": true,
             "title": { "en": "Cash Counter" },
             "star": true,
-            "tech": ["sass", "preact"],
+            "tech": ["sass", "react"],
             "github": "https://github.com/nemnorbert/cash_counter"
         },
     
@@ -59,13 +75,13 @@
         "webOS": {
             "active": false,
             "title": {"en": "Web OS"},
-            "tech": ["sass", "preact"]
+            "tech": ["sass", "react"]
         },
 
         "drinkGame": {
             "active": false,
             "title": { "en": "Drinking Game","hu": "Ivós játék" },
-            "tech": ["sass", "preact"]
+            "tech": ["sass", "react"]
         }
     }
 }

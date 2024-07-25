@@ -12,7 +12,7 @@ export default component$((props: Props) => {
     const translates = props.translates;
 
     return (<>
-        <h3>{translates.contact.sendmail}</h3>
+        <h3>{translates.contact.send}</h3>
         <form>
             <input id="name" type="text" required />
             <input id="email" type="email" required />

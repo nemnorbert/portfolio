@@ -5,9 +5,11 @@
     },
     "about": {
         "title": "Ki vagyok én?",
-        "text": ""
+        "text": "",
+        "skill": "Képességek",
+        "learn": "Mit tanulok most?"
     },
-    "cv": "Önéletrajz",
+    "cv": "Önéletrajz letöltése",
     "work": {
         "btns": {
             "demo": "Bemutató",
@@ -15,7 +17,8 @@
         }
     },
     "contact": {
-        "sendmail": "Email küldése"
+        "card": "Digitális Névjegykártya",
+        "send": "Email küldése"
     },
     "nav": {
         "home": "Főoldal",

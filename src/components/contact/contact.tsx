@@ -14,8 +14,8 @@ export default component$((props: Props) => {
     const translates = props.translates;
 
     return (<>
-        <h2 class="title">{translates.nav.contact}</h2>
         <section>
+            <h2 class="title">{translates.nav.contact}</h2>
             <div class="social">
                 <div onClick$={() => emailSender()} class="link"><i class="bi bi-envelope-fill"></i> email</div>
                 {
@@ -30,9 +30,11 @@ export default component$((props: Props) => {
                 <Form translates={translates} />
             </div>
             <a href={configJson.card} class="card" target="_blank">
-                <div class="title"><i class="bi bi-person-badge-fill"></i> Digitális Névjegykártya</div>
+                <div class="title">
+                    <i class="bi bi-person-badge-fill"></i> {translates.contact.card}
+                </div>
                 <div class="content">
-
+                    <img src="/card_qr.webp" width={250} height={250} alt="digital business card" />
                 </div>
             </a>
         </section>

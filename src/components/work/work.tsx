@@ -36,14 +36,14 @@ export default component$((props: Props) => {
                 >
                 All
                 </button>
-                {Object.entries(portfolioJSON.tech).map(([key, value]) => (
+                {portfolioJSON.tech_menu.map((item, key) => (
                     <button 
                         key={key} 
-                        title={value.name} 
-                        class={category.current.includes(key) ? "active" : undefined}
-                        onClick$={() => clickFilterButton(key)}
+                        title={portfolioJSON.tech[item].name} 
+                        class={category.current.includes(item) ? "active" : undefined}
+                        onClick$={() => clickFilterButton(item)}
                     >
-                    <i class={`devicon-${value.icon}`}></i> {value.name}
+                    <i class={`devicon-${portfolioJSON.tech[item].icon}`}></i> {portfolioJSON.tech[item].name}
                     </button>
                 ))}
             </div>

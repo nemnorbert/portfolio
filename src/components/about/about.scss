@@ -1,5 +1,8 @@
 @import 'src/sass.scss';
 
+$tech-width: 75px;
+$tech-margin: 20px;
+
 section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -9,6 +12,7 @@ section {
     margin: 0 auto;
     width: 90vw;
     min-width: $min-width;
+    perspective: 1500px;
     
     & > * {
         grid-column: span 12;
@@ -21,11 +25,16 @@ section {
     .picture {
         padding: 0;
         overflow: hidden;
+        animation: 10s profilePicture 2s infinite ease-in-out;
     
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        @keyframes profilePicture {
+            0%, 100% {transform: rotateY(0) rotateX(0)}
+            50% {transform: rotateY(5deg) rotateX(5deg)}
         }
     }
     
@@ -38,26 +47,47 @@ section {
         row-gap: 1rem;
         padding: 2rem;
 
-        .title {
-            font-size: 25px;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-align: center;
-        }
         p {
             text-align: justify;
+        }
+    }
+
+    .skill, .learn {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: $gap-1 0;
+        text-align: center;
+        overflow: hidden;
+        
+        .row, .content {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            animation: animateRow 30s linear infinite;
+
+            .item {
+                min-width: $tech-width;
+                margin-left: $tech-margin;
+            }
+            i {
+                font-size: 50px;
+            }
+        }
+        .content {
+            animation: none;
+            justify-content: space-evenly;
+            .item {
+                margin: 0;
+            }
+        }
+        @keyframes animateRow {
+            to { translate: calc(-14 * ($tech-width + $tech-margin)); }
         }
     }
     
     .cv, .flag {
         grid-column: span 6;
-    }
-
-    .learn {
-        .content {
-            display: flex;
-            flex-direction: column;
-        }
     }
 
     .cv {
@@ -72,6 +102,19 @@ section {
         font-size: 22px;
         text-align: center;
         overflow: hidden;
+        position: relative;
+
+        svg {
+            position: absolute;
+            left: -10%;
+            bottom: -20%;
+            height: 120%;
+            width: auto;
+            opacity: .15;
+        }
+        i {
+            font-size: 50px;
+        }
         
         & > div {
             transform: translateY(-50px);
@@ -105,11 +148,11 @@ section {
         .picture, .about, .learn, .skill {
             grid-column: span 6;
         }
+        .about {
+            grid-row: span 2;
+        }
         .cv, .flag {
             grid-column: span 3;
-        }
-        .skill {
-            grid-row: span 2;
         }
     }
 }
@@ -120,14 +163,17 @@ section {
             grid-column: span 4;
             grid-row: span 2;
         }
-        .learn, .skill {
+        .about {
+            grid-column: span 6;
+        }
+        .learn {
             grid-column: span 4;
         }
         .cv, .flag {
             grid-column: span 2;
         }
         .skill {
-            grid-row: span 1;
+            grid-column: span 8;
         }
     }
 }
