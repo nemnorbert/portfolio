@@ -11,10 +11,7 @@ export default component$(() => {
 
         <nav>
             <ul>
-                <li><Link href="/">Főoldal</Link></li>
-                <li><Link href="/work">Munka</Link></li>
-                <li><Link href="/about">Rólam</Link></li>
-                <li><Link href="/contact">Kapcsolat</Link></li>
+                <li><Link href="#">Menu</Link></li>
             </ul>
         </nav>
     </div>

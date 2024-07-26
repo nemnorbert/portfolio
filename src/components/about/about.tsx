@@ -14,8 +14,8 @@ export default component$((props: Props) => {
     const translates = props.translates;
 
     return (<>
-        <h2 class="title">{ translates.nav.about }</h2>
         <section>
+            <h2 class="title">{ translates.nav.about }</h2>
             <div class="picture">
                 <ProfilePicture alt="Picture of me" />
             </div>

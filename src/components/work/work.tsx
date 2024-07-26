@@ -26,9 +26,7 @@ export default component$((props: Props) => {
 
     return (
         <section>
-            <div class="title">
-                <h2>{translates.nav.work}</h2>
-            </div>
+            <h2 class="title">{translates.nav.work}</h2>
             <div class="filter">
                 <button 
                     class={category.current.length === 0 ? "active" : undefined}

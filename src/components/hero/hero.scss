@@ -3,8 +3,9 @@
 section {
     position: relative;
     text-transform: uppercase;
-    min-height: 80vh;
+    min-height: 70vh;
     overflow: hidden;
+    max-width: $max-width;
 
     .title {
         position: absolute;
@@ -20,11 +21,18 @@ section {
         }
         .buttons {
             display: flex;
-            gap: 1rem;
+            align-items: baseline;
+            gap: $gap-1;
+
             & > div {
-                border-radius: $border-base;
-                background-color: magenta;
+                border-radius: 2rem;
+                background-color: var(--color-primary);
                 padding: 8px 12px;
+            }
+            div:nth-child(2) {
+                background-color: transparent;
+                color: var(--color-primary);
+                border: 2px solid var(--color-primary);
             }
         }
     }

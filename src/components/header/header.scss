@@ -1,17 +1,17 @@
 @import 'src/sass.scss';
 
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0 1rem;
     z-index: 10;
     color: var(--color-text);
+    background-color: var(--color-bg);
     font-weight: bold;
     text-transform: uppercase;
+    backdrop-filter: blur(5px);
+    height: 50px;
 
     ul {
         display: flex;

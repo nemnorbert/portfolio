@@ -9,17 +9,19 @@ section {
     grid-template-rows: auto;
     gap: $gap-1;
     color: white;
-    margin: 0 auto;
-    width: 90vw;
-    min-width: $min-width;
     perspective: 1500px;
     
     & > * {
         grid-column: span 12;
         border-radius: $border-base;
         box-shadow: 0 0 10px #0000002e;
-        background-color: rgba(36, 36, 36, 0.842);
         padding: $gap-1;
+        background-color: var(--color-bg-2);
+    }
+
+    .title {
+        background-color: transparent;
+        box-shadow: none;
     }
 
     .picture {
@@ -39,7 +41,6 @@ section {
     }
     
     .about {
-        background-color: var(--color-bg-1);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -49,6 +50,7 @@ section {
 
         p {
             text-align: justify;
+            font-size: 20px;
         }
     }
 

@@ -11,13 +11,15 @@ export default component$((props: Props) => {
     useStylesScoped$(style);
     const translates = props.translates;
 
-    return (<>
-        <h3>{translates.contact.send}</h3>
-        <form>
-            <input id="name" type="text" required />
-            <input id="email" type="email" required />
-            <textarea id="message" rows={4} required />
-            <input type="submit" value="Submit" />
-        </form>
-    </>);
+    return (
+        <div class="form">
+            <h3>{translates.contact.send}</h3>
+            <form>
+                <input id="name" type="text" required />
+                <input id="email" type="email" required />
+                <textarea id="message" rows={4} required />
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    );
 });
