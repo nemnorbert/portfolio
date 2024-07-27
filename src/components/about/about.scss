@@ -10,6 +10,7 @@ section {
     gap: $gap-1;
     color: white;
     perspective: 1500px;
+    font-weight: bold;
     
     & > * {
         grid-column: span 12;

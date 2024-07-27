@@ -4,13 +4,24 @@ section {
     position: relative;
     text-transform: uppercase;
     min-height: 70vh;
+    max-width: none;
     overflow: hidden;
-    max-width: $max-width;
+    background-image: linear-gradient(transparent, #29294e);
+    padding: 0;
 
-    .title {
+    .box {
+        max-width: $max-width;
         position: absolute;
-        left: 2rem;
-        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        padding: 1rem;
+        width: 100%;
+        z-index: 1;
+    }
+    .title {
+        padding-bottom: 10vh;
+        padding-left: 1rem;
 
         h1 {
             font-size: 50px;
@@ -22,7 +33,7 @@ section {
         .buttons {
             display: flex;
             align-items: baseline;
-            gap: $gap-1;
+            gap: 5px;
 
             & > div {
                 border-radius: 2rem;

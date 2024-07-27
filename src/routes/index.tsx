@@ -16,9 +16,11 @@ export default component$(() => {
   return (
     <>
       <Hero translates={translates.current} />
-      <About translates={translates.current} />
-      <Work translates={translates.current} />
-      <Contact translates={translates.current} />
+      <main>
+        <About translates={translates.current} />
+        <Work translates={translates.current} />
+        <Contact translates={translates.current} />
+      </main>
     </>
   );
 });
