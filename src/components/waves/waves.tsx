@@ -3,7 +3,8 @@ import style from './waves.scss?inline';
 
 export default component$((props) => {
   useStylesScoped$(style);
-  const color = props.rgb || "";
+  //const color = props.rgb || "";
+  const color = '124, 200, 255';
 
   return (
       <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

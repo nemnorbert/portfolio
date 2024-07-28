@@ -10,19 +10,31 @@
     --color-secundary: rgb(18, 27, 52);
 
     --color-bg: rgb(26, 63, 119);
-    --color-bg-1: rgba(16, 16, 16);
-    --color-bg-2: rgba(16, 16, 16, 0.3);
-    --color-text: rgb(255, 250, 250);
+    --color-bg-1: rgb(222, 229, 255);
+    --color-bg-2: rgba(255, 255, 255, 0.5);
+    --color-text: rgb(12, 26, 45);
 
-    --sea-top: rgb(39, 63, 131);
-    --sea-bottom: rgba(16, 16, 16);
+    --planet: rgb(255, 213, 168);
+    --sea-top: rgb(124, 200, 255);
+    --sea-bottom: rgb(12, 69, 143);
     --sea-bottom-2: rgba(16, 16, 16, 0.3);
 }
+html.dark {
+    --color-text: rgb(255, 250, 250);
+    --color-bg-1: rgb(20, 20, 20);
+    --color-bg-2: rgba(27, 27, 27, 0.15);
+
+    --planet: rgb(179, 199, 255);
+    --sea-top: rgb(39, 63, 131);
+    --sea-bottom: rgba(16, 16, 16);
+}
+
+
 html {
     font-family: 'Satoshi', sans-serif;
     scroll-behavior: smooth;
     color: var(--color-text);
-    background-color: black;
+    background-color: var(--color-bg-1);
 }
 main {
     display: flex;
@@ -40,12 +52,11 @@ section {
 }
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
-    color: var(--color-primary);
 }
 h2 {
     font-size: 35px;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem;
 }
 h3 {
     font-size: 22px;

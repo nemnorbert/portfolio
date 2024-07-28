@@ -3,17 +3,19 @@
 section {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-bg-2);
+    //background-color: var(--color-bg-2);
     padding: 0;
     
+    .title {
+        color: var(--color-text);
+    }
     .filter {
         display: flex;
         overflow: auto;
         column-gap: 10px;
         top: 0;
-        position: sticky;
+        //position: sticky;
         padding: 5px;
-        //background-color: var(--color-bg-2);
         z-index: 10;
         margin: 0 auto;
         max-width: 100%;
@@ -25,6 +27,12 @@ section {
             column-gap: 5px;
             font-size: 20px;
             white-space: nowrap;
+            color: var(--color-text);
+            border-color: var(--color-text);
+        }
+        button.active {
+            background-color: var(--color-text);
+            color: var(--color-bg-1);
         }
     }
     .content {

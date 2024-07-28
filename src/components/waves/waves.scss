@@ -5,9 +5,10 @@
     bottom: 0;
     width: 100%;
     margin-bottom:-7px;
-    min-height:100px;
-    height:10vh;
+    min-height:50px;
+    height:7vh;
     max-height:150px;
+    z-index: 0;
 
     // Animation
     .parallax > use {
@@ -42,6 +43,7 @@
 
 @media only screen and (min-width: $laptop-width) {
     .waves {
+        min-height:100px;
         height:15vh;
         max-height:250px;
     }

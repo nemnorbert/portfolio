@@ -24,6 +24,8 @@ export default component$((props: Props) => {
                 </div>
             </div>
 
+            <div class="planet"></div>
+
             <Waves rgb="39, 63, 131" />
         </section>
     );

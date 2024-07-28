@@ -2,10 +2,11 @@
 
 footer {
     position: relative;
-    color: var(--color-text);
+    color: white;
     min-height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-secundary);
+    font-weight: bold;
 }

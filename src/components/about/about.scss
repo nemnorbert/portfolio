@@ -8,16 +8,18 @@ section {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: $gap-1;
-    color: white;
+    color: var(--color-text);
     perspective: 1500px;
     font-weight: bold;
     
     & > * {
         grid-column: span 12;
         border-radius: $border-base;
-        box-shadow: 0 0 10px #0000002e;
         padding: $gap-1;
-        background-color: var(--color-bg-2);
+    }
+
+    .skill, .learn, .about {
+        border: solid 2px var(--color-text);
     }
 
     .title {
@@ -94,7 +96,7 @@ section {
     }
 
     .cv {
-        color: white;
+        color: var(--color-bg-1);
         background-color: rgb(0, 174, 255);
         background-image: linear-gradient(transparent, rgba(20, 20, 20, 0.212));
         font-weight: bold;
