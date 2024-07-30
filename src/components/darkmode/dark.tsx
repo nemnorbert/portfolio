@@ -44,7 +44,7 @@ export default component$(() => {
   console.log("switcher: ", theme)
 
   return (
-    <label title={theme.dark ? "On" : "Off"} class="switch">
+    <label class="switch">
       <input
         type="checkbox"
         id="hide-checkbox"

@@ -3,7 +3,7 @@
 section {
     position: relative;
     text-transform: uppercase;
-    min-height: 70vh;
+    min-height: 80vh;
     max-width: none;
     overflow: hidden;
     padding: 0;
@@ -11,9 +11,8 @@ section {
     .box {
         max-width: $max-width;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
+        top: 50%;
+        transform: translateY(-50%);
         padding: 1rem;
         width: 100%;
         z-index: 1;

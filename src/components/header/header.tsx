@@ -11,10 +11,16 @@ export default component$(() => {
         <div class="logo">NN</div>
 
         <nav class="menu">
+          <ul class="laptop">
+              <li><Link href="#">Home</Link></li>
+              <li><Link href="#">About</Link></li>
+              <li><Link href="#">Portfolio</Link></li>
+              <li><Link href="#">Contact</Link></li>
+          </ul>
           <div class="dark"><DarkMode /></div>
-            <ul>
-                <li><Link href="#">Menu</Link></li>
-            </ul>
+          <div class="mobile">
+            <span></span><span></span><span></span>
+          </div>
         </nav>
     </div>
   );

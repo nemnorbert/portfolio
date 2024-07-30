@@ -1,18 +1,10 @@
 @import 'src/sass.scss';
 
-.form {
-    //background-color: var(--color-bg-2);
-    backdrop-filter: blur(3px);
+form {
+    border-radius: $border-base;
     border: solid var(--color-bg) 2px;
     padding: 1rem;
-    text-align: center;
-    border-radius: $border-base;
-
-    h3 {
-        padding-bottom: 1rem;
-    }
-}
-form {
+    backdrop-filter: blur(3px);
     display: flex;
     flex-direction: column;
     justify-content: center;

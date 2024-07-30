@@ -30,7 +30,7 @@ export default component$((props: Props) => {
                 </div>
 
                 <div class="form">
-                    <Form translates={translates} />
+                    <Form />
                 </div>
 
                 <a class="card" href={configJson.card} target="_blank">
@@ -43,7 +43,7 @@ export default component$((props: Props) => {
                 </a>
             </div>
 
-            <Waves colors={['163, 216, 255', '39, 63, 131']} />
+            <Waves />
         </section>
     </>);
 });
