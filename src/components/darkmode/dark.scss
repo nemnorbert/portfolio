@@ -11,7 +11,7 @@
     width: 50px;
     height: 25px;
     border-radius: 25px;
-    background-color: magenta;
+    background-color: var(--sea-top);
     position: relative;
     cursor: pointer;
     transition: all .3s linear;
@@ -40,5 +40,5 @@ input:checked + .slider{
     
 input:checked + .slider:before{
     left: 25px;
-    background-color: green;
+    background-color: var(--color-bg-1);
 }

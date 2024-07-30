@@ -1,7 +1,9 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$, useContext } from "@builder.io/qwik";
 import style from './hero.scss?inline';
 import type { TranslatesCurrent } from "~/types/locales";
 import Waves from "~/components/waves/waves";
+import Header from "~/components/header/header";
+import { CTX_Theme } from '~/root';
 
 interface Props {
     translates: TranslatesCurrent
@@ -10,9 +12,11 @@ interface Props {
 export default component$((props: Props) => {
     useStylesScoped$(style);
     const translates = props.translates;
+    const theme = useContext(CTX_Theme);
 
     return (
         <section>
+            <Header />
             <div class="box">
                 <div class="title">
                     <h1>{translates.home.name || ''}</h1>
@@ -24,9 +28,9 @@ export default component$((props: Props) => {
                 </div>
             </div>
 
-            <div class="planet"></div>
+            <div class={theme.dark ? "planet moon" : "planet"}></div>
 
-            <Waves rgb="39, 63, 131" />
+            <Waves />
         </section>
     );
 });

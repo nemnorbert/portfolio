@@ -19,7 +19,8 @@ section {
     }
 
     .skill, .learn, .about {
-        border: solid 2px var(--color-text);
+        border: solid 3px var(--color-text);
+        transition: border-color $ani-time-1;
     }
 
     .title {
@@ -49,7 +50,6 @@ section {
         justify-content: center;
         align-items: center;
         row-gap: 1rem;
-        padding: 2rem;
 
         p {
             text-align: justify;

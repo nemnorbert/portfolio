@@ -1,5 +1,6 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$, useContext } from "@builder.io/qwik";
 import styles from "./dark.scss?inline";
+import { CTX_Theme } from '~/root';
 
 const storageName = 'darkmode';
 
@@ -11,8 +12,9 @@ const checkIt = () => {
   return false;
 }
 
-const darkmode = (switchTo = false) => {
+const darkmode = (switchTo = false, status: any) => {
   let isDark;
+
   if (!switchTo) {
       isDark = checkIt();
   } else {
@@ -31,18 +33,22 @@ const darkmode = (switchTo = false) => {
           localStorage.setItem(storageName, JSON.stringify(false));
       }
   }
+
+  status.dark = isDark;
 }
  
 // Component
 export default component$(() => {
   useStylesScoped$(styles);
+  const theme = useContext(CTX_Theme);
+  console.log("switcher: ", theme)
 
   return (
-    <label class="switch">
+    <label title={theme.dark ? "On" : "Off"} class="switch">
       <input
         type="checkbox"
         id="hide-checkbox"
-        onClick$={() => darkmode(true)}
+        onClick$={() => darkmode(true, theme)}
       />
       <span class="slider round"></span>
     </label>

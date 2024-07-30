@@ -13,7 +13,7 @@ export default component$((props: Props) => {
     const modal = props.modal.current;
     const isOpen = modal.open;
 
-    console.log("modal is: ", modal)
+    //console.log("modal is: ", modal)
 
     return (
       <div class={isOpen ? 'modal open' : 'modal'}>

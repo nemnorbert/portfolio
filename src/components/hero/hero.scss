@@ -6,8 +6,6 @@ section {
     min-height: 70vh;
     max-width: none;
     overflow: hidden;
-    background-image: linear-gradient(transparent, #29294e);
-    //background-image: linear-gradient(transparent, #ff627c88, #ffca9b);
     padding: 0;
 
     .box {
@@ -22,10 +20,6 @@ section {
     }
     .title {
         padding-bottom: 10vh;
-        padding-left: 1rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 10px;
 
         h1 {
             font-size: 50px;
@@ -37,18 +31,22 @@ section {
         .buttons {
             display: flex;
             align-items: baseline;
-            gap: 5px;
+            gap: 8px;
+            padding-top: 1rem;
 
             & > div {
                 border-radius: 2rem;
-                background-color: var(--color-bg-1);
-                padding: 8px 12px;
+                border: solid 3px var(--color-primary);
+                background-color: var(--color-primary);
+                color: var(--color-bg-1);
+                transition: background-color $ani-time-1, color $ani-time-1;
+                padding: 5px 10px;
                 font-weight: bold;
+                cursor: pointer;
             }
             div:nth-child(2) {
-                background-color: transparent;
-                color: var(--color-bg-1);
-                border: 2px solid var(--color-bg-1);
+                background-color: var(--color-bg-1);
+                color: var(--color-primary);
             }
         }
     }
@@ -58,12 +56,18 @@ section {
         background-image: linear-gradient(-225deg,rgba(255, 255, 255, 0.815), transparent, rgba(0, 0, 0, 0.1));
         box-shadow: 0 0 30vw var(--planet), 0 0 15vw var(--planet), 0 0 10px var(--planet);
         position: absolute;
-        bottom: -10vh;
-        right: -5vw;
+        bottom: 30vh;
+        right: -10vw;
         height: auto;
         width: clamp(250px, 25vw, 600px);
         aspect-ratio: 1/1;
         border-radius: 50%;
+        transition: bottom $ani-time-1, right $ani-time-1, background-color $ani-time-1, box-shadow $ani-time-1;
+
+        &.moon {
+            bottom: -5vh;
+            right: -5vw;
+        }
     }
 }
 

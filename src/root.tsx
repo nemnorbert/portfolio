@@ -7,9 +7,11 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 import "./global.scss";
 import type { Translates } from "~/types/locales";
+import type { Theme } from "~/types/theme";
 import loadLocales from "~/utils/loadLocales";
 
 export const CTX_Translate = createContextId<Translates>('CTX_Translate');
+export const CTX_Theme = createContextId<Theme>('CTX_Theme');
 
 type Props = {
   lang?: string;
@@ -18,6 +20,7 @@ type Props = {
 export default component$((props: Props) => {
   const lang = props.lang || 'en';
   const translate: any = useStore({ current: {} });
+  const theme: any = useStore({dark: false})
 
   const loadData = $(async () => {
     const data = await loadLocales(lang);
@@ -29,6 +32,7 @@ export default component$((props: Props) => {
   });
 
   useContextProvider(CTX_Translate, translate);
+  useContextProvider(CTX_Theme, theme);
   /*
    * The root of a QwikCity site always start with the <QwikCityProvider> component,
    * immediately followed by the document's <head> and <body>.

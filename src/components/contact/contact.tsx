@@ -43,7 +43,7 @@ export default component$((props: Props) => {
                 </a>
             </div>
 
-            <Waves rgb="18,27,52" />
+            <Waves colors={['163, 216, 255', '39, 63, 131']} />
         </section>
     </>);
 });

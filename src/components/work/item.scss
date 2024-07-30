@@ -9,8 +9,7 @@
         cursor: pointer;
         position: relative;
         min-width: 200px;
-        box-shadow: $shadow-1;
-        background-color: var(--color-bg-2);
+        background-color: var(--color-primary);
         width: auto;
         aspect-ratio: 1/1;
 
@@ -27,14 +26,12 @@
         right: 0;
         padding: 10px;
         padding-top: 3rem;
-        background-image: linear-gradient(transparent, var(--color-bg-2));
+        background-image: linear-gradient(transparent, var(--color-bg-1));
 
         .title {
-            font-size: 20px;
-            text-transform: uppercase;
+            font-size: 18px;
             font-weight: bold;
             white-space: nowrap;
-            overflow: hidden;
         }
         .tech {
             display: flex;
@@ -49,7 +46,6 @@
     }
     .action {
         background-color: var(--color-bg-1);
-        background-image: linear-gradient(transparent, rgba(15, 15, 15, 0.2));
         font-weight: bold;
         display: flex;
         justify-content: space-around;

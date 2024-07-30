@@ -8,9 +8,9 @@ export default component$(() => {
 
   return (
     <div id='header'>
-        <div>NN</div>
+        <div class="logo">NN</div>
 
-        <nav>
+        <nav class="menu">
           <div class="dark"><DarkMode /></div>
             <ul>
                 <li><Link href="#">Menu</Link></li>

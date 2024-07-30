@@ -4,7 +4,7 @@
         "node", "ex", "sql", "aws", 
         "npm", "git", "blender", "ps"
     ],
-    "learn": ["qwik","ts","aws"],
+    "learn": ["react","qwik","aws"],
     "tech_menu": ["qwik","react","ts","sass","lit","node","sql"],
 
     "tech": {
